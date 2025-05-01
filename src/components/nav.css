@@ -1,0 +1,102 @@
+.dropdownMenu {
+    left: 0;
+    top: 0;
+    background-color: #2171B5;
+    padding: 40px;
+    width: 200px;
+    height:100vh;
+    position: fixed;
+}
+
+.dropdownMenu a {
+    font-size: 20px;
+    font-weight: semibold;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+
+.hamburger {
+    top: 0;
+    right: 0;
+    background-color: #2171B5;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+@media (max-width: 1100px) {  /* visible only when screen is 1100px or smaller */
+    .hamburger {
+        visibility: visible;
+    }
+}
+
+
+.header-bar {
+    top: 0;
+    left: 0; /* make sure it starts at left edge of screen */
+    width: 100vw; /* spans entire viewport width */
+    background-color: white;
+    position: absolute; /* only header bar absolute for this, other elements get manipulated through display, etc. */
+    border-bottom-color: grey;
+    border-top-color: #2171B5;
+    border-style: solid; /* why is there not a default for this, why need to specify? */
+    border-width: 8px 0 0.7px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-row-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header-row-two {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-link {
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-link img {
+    height: 60px;
+}
+
+
+.logo-link:hover {
+    color: #2171B5;
+}
+
+
+.header-content {
+    display: none;
+}
+
+@media (min-width: 1100px) {  /* visible only when screen is 1100px or bigger */
+    .header-content {
+        display: flex;
+    }
+}
+
+.header-content a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2171B5;
+    padding: 5px 20px;
+}
+
+.header-content a:hover {
+    color: white;
+    background-color: #2171B5;
+}
