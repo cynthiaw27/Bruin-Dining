@@ -28,6 +28,10 @@ h1 {
   line-height: 1.1;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -40,9 +44,7 @@ button {
   border: 1px solid transparent;
   cursor: pointer;
 }
-button:hover {
-  border-color: #2171B5;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
