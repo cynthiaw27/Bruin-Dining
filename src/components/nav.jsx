@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./nav.css";
-import { Menu, ChevronUp, ChevronDown, X } from 'lucide-react';
+import { Menu, ChevronUp, ChevronDown} from 'lucide-react';
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { Collapse } from 'react-collapse';
+import { RiCloseLargeFill } from "react-icons/ri";
 
 
 export function Header() {
   /* isDropdownOpen: holds value of the state */
   /* setIsDropdownOpen: setter function to update state value */
   /* usestate needs both of these!! */
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); /* dropdown is initiially closed */
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); /* dropdown is initially closed */
   function handleMenuClick() { /* no need to put export default if I don't need to import this func into another file */
     setIsDropdownOpen(!isDropdownOpen);
     console.log("Menu clicked");
@@ -19,10 +19,10 @@ export function Header() {
   function handleIconClick(index) {
       if (activeIndex === index) { /* if clicked is already active, then close */
         return setActiveIndex(null);
+      } else {
+          setActiveIndex(index); /* if clicked is not active, then open */
       }
-      setActiveIndex(index); /* if clicked is not active, then open */
   }
-
 
   return (
     <div className="header-bar">
@@ -60,7 +60,7 @@ export function Header() {
           </div>
 
           {/* MENUS */}
-          <div className="collapse-header">
+          <div>
             <div className="header-individual-items" onClick={() => handleIconClick(0)}> 
             <a>Menus</a>
             <span>
@@ -91,16 +91,18 @@ export function Header() {
           </div>
 
           {/* SEARCH */}
-          <div className="header-individual-items" onclick={() => handleIconClick(0)}>
-            <a>
-              <span>
-                {activeIndex === 0 ? (
-                   <X /> /* how do i get this to work? */
-                ) : (
-                  <FaMagnifyingGlass />
-                )}
-              </span>
-            </a>
+          <div>
+            <div className="header-individual-items" onClick={() => handleIconClick(1)}>
+              <a>
+                <span>
+                  {activeIndex === 1 ? (
+                    <RiCloseLargeFill />
+                  ) : (
+                    <FaMagnifyingGlass />
+                  )}
+                </span>
+              </a>
+            </div>
           </div>
         </nav>
       </div>

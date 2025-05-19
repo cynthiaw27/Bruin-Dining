@@ -122,11 +122,13 @@
     width: 240px;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 
 .collapse-content a {
     display: flex;
     color: #2171B5;
+    background-color: #f8f8f8;
     width: 200px;
     padding: 10px 20px;
     border-style: solid;
