@@ -59,10 +59,10 @@ export function Header() {
             <a href="/">Home</a>
           </div>
 
-          {/* MENUS */}
-          <div>
+          {/* DINING HALLS */}
+          <div className="menudropdown">
             <div className="header-individual-items" onClick={() => handleIconClick(0)}> 
-            <a>Menus</a>
+            <a>Dining Halls</a>
             <span>
               {activeIndex === 0 ? (
                 <ChevronUp className="toggle-icon"/> /* if icon is clicked, show up arrow */
@@ -80,6 +80,31 @@ export function Header() {
                 )}
           </div>
 
+          {/* Other menus */}
+          <div className="menudropdown">
+            <div className="header-individual-items" onClick={() => handleIconClick(1)}> 
+            <a>Grab & Go</a>
+            <span>
+              {activeIndex === 1 ? (
+                <ChevronUp className="toggle-icon"/> /* if icon is clicked, show up arrow */
+              ) : (
+                <ChevronDown className="toggle-icon"/>
+             )}
+            </span>
+            </div>
+            {activeIndex === 1 && (
+                  <div className="collapse-content">
+                    <a href="/bcafe">Bruin Cafe</a>
+                    <a href="/cafe1919">Cafe 1919</a>
+                    <a href="/foodtrucks">Food Trucks</a>
+                    <a href="/rendezvous">Rendezvous</a>
+                    <a href="/drey">The Drey</a>
+                    <a href="/study">The Study at Hedrick</a>
+                    <a href="feast">Feast at Reiber</a>
+                  </div>
+                )}
+          </div>
+
           {/* HOURS */}
           <div className="header-individual-items">
             <a href="/hours">Hours</a> 
@@ -92,10 +117,10 @@ export function Header() {
 
           {/* SEARCH */}
           <div>
-            <div className="header-individual-items" onClick={() => handleIconClick(1)}>
+            <div className="header-individual-items" onClick={() => handleIconClick(2)}>
               <a>
                 <span>
-                  {activeIndex === 1 ? (
+                  {activeIndex === 2 ? (
                     <RiCloseLargeFill />
                   ) : (
                     <FaMagnifyingGlass />

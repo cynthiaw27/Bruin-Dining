@@ -38,6 +38,7 @@
     top: 0;
     left: 0; /* make sure it starts at left edge of screen */
     width: 100vw; /* spans entire viewport width */
+    height: 150px;
     background-color: white;
     position: absolute; /* only header bar absolute for this, other elements get manipulated through display, etc. */
     border-bottom-color: grey;
@@ -96,7 +97,6 @@
 
 .header-individual-items {
     display: inline-flex;
-    justify-content: flex-start;
     gap: 5px;
     align-items: center;
     color: #2171B5; /* default text and icon color */
@@ -119,10 +119,12 @@
 }
 
 .collapse-content {
+    position: absolute;
+    top: 150px;
     width: 240px;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    z-index: 3;
 }
 
 .collapse-content a {
@@ -139,9 +141,4 @@
 .collapse-content a:hover {
     background-color: #2171B5;
     color: white;
-}
-
-.collapse-header {
-    display: flex;
-    flex-direction: column;
 }

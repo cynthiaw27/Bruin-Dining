@@ -7,12 +7,15 @@ function App() {
     <div>
       <Header />
       <div>
-        <img src="/images/foodtruck.jpg" className="picss" alt="photo1"/>
-        <img src="/images/pic1.jpg" className="picss" alt="photo2"/>
+        <div className="pic-container">
+          <img src="/images/pizza.avif" className="picss" alt="photo1"/>
+          <img src="/images/sushi.avif" className="picss" alt="photo1"/>
+          <img src="/images/deneve.avif" className="picss" alt="photo3"/>
+        </div>
+
         <h1>Welcome!</h1>
         <p>Explore our menus and hours of operation.</p>
         <p>Find out more about our dining options on campus.</p>
-
       </div>
     </div>
   );
