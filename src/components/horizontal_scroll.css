@@ -1,0 +1,7 @@
+.media-container { /* eventually add some animation stuff to make it look better lol */ 
+  height: 600px;
+  display: flex;
+  flex-direction: row; /* put all the images in one row */
+  overflow-x: scroll; /* horizontal scrolling */
+  overflow-y: hidden; /* no vertical scrolling, effectively chops off exess */
+}

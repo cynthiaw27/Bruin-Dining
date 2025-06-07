@@ -1,0 +1,23 @@
+.footer-section {
+    width: 100vw;
+    height: 300px;
+    background-color: #2171B5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text p {
+    color: white;
+}
+
+.footer-section h1 {
+    color: white;
+}

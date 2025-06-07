@@ -1,22 +1,23 @@
 import React from "react";
 import './App.css';
 import { Header } from "./components/nav.jsx";
+import { FooterPart } from "./components/footer.jsx";
+import { Carousel } from "./components/horizontal_scroll.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="page-container">
       <Header />
-      <div>
-        <div className="pic-container">
-          <img src="/images/pizza.avif" className="picss" alt="photo1"/>
-          <img src="/images/sushi.avif" className="picss" alt="photo1"/>
-          <img src="/images/deneve.avif" className="picss" alt="photo3"/>
+      <div className="body-container">
+        <Carousel />
+        <div className="body-text-container">
+          <h1>BLAY BLAH BALH</h1>
+          <p>hellur there</p>
+          <p>BLAH BLAH BALHB LAH</p>
+          <p>pretend this is something interesting and important to read</p>
         </div>
-
-        <h1>Welcome!</h1>
-        <p>Explore our menus and hours of operation.</p>
-        <p>Find out more about our dining options on campus.</p>
       </div>
+      <FooterPart />
     </div>
   );
 }
